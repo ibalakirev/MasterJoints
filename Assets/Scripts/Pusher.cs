@@ -18,7 +18,7 @@ public abstract class Pusher<T>: MonoBehaviour where T : MonoBehaviour
         _inputReader = GetComponent<InputReader>();
     }
 
-    protected abstract void Push();
+    protected abstract void MoveAnchor();
 
     protected abstract void SetAnchorPosition(Vector3 position);
 }

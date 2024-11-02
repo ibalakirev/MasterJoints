@@ -8,19 +8,19 @@ public class SwingPusher : Pusher<Swing>
     {
         if (InpReader.GetInputPushingSwing() == true)
         {
-            Push();
+            MoveAnchor();
         }
     }
 
-    protected override void Push()
+    protected override void MoveAnchor()
     {
+        ObjectMovable.Rigdbody.AddForce(_forceAwakening);
+
         SetAnchorPosition(PositionAnchor);
     }
 
     protected override void SetAnchorPosition(Vector3 position)
     {
-        ObjectMovable.Rigdbody.AddForce(_forceAwakening);
-
         ObjectMovable.Joint.anchor = position;
     }
 }

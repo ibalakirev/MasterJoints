@@ -33,7 +33,7 @@ public class CatapultPusher : Pusher<Catapult>
     {
         if (InpReader.GetInputPushingCatapult() == true)
         {
-            Push();
+            MoveAnchor();
         }
 
         if (InpReader.GetInputRechargeCatapult() == true)
@@ -42,7 +42,7 @@ public class CatapultPusher : Pusher<Catapult>
         }
     }
 
-    protected override void Push()
+    protected override void MoveAnchor()
     {
         _catapulthandler.ResetCounter—ollisions();
 
