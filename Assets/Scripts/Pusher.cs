@@ -2,7 +2,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(InputReader))]
 
-public abstract class Pusher<T>: MonoBehaviour where T : MonoBehaviour
+public abstract class Pusher<T> : MonoBehaviour where T : MonoBehaviour
 {
     [SerializeField] private T _objectMovable;
     [SerializeField] private Vector3 _positionAnchor;
@@ -18,7 +18,7 @@ public abstract class Pusher<T>: MonoBehaviour where T : MonoBehaviour
         _inputReader = GetComponent<InputReader>();
     }
 
-    protected abstract void MoveAnchor();
-
     protected abstract void SetAnchorPosition(Vector3 position);
+
+    protected abstract void MoveAnchor();
 }

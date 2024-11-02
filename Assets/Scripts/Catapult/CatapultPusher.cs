@@ -42,16 +42,16 @@ public class CatapultPusher : Pusher<Catapult>
         }
     }
 
+    protected override void SetAnchorPosition(Vector3 position)
+    {
+        ObjectMovable.Joint.anchor = position;
+    }
+
     protected override void MoveAnchor()
     {
         _catapulthandler.ResetCounter—ollisions();
 
         SetAnchorPosition(PositionAnchor);
-    }
-
-    protected override void SetAnchorPosition(Vector3 position)
-    {
-        ObjectMovable.Joint.anchor = position;
     }
 
     private void ReturnStartingPosition()
