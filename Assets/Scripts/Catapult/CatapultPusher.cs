@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CatapultPusher : Pusher<Catapult>
 {
-    [SerializeField] private ProjectileSpawnPosition _projectileSpawnPosition;
+    [SerializeField] private ProjectileSpawnPoint _projectileSpawnPosition;
 
     private CatapultHandler _catapulthandler;
     private Vector3 _difaultAnchorPosition;
